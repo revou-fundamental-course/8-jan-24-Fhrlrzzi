@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Katik Kalkulator Matematik</title>
+</head>
+<body>
+
+    <header>
+        <h1>Katik <span>Kalkulator Matematik</span> </h1> 
+    </header>
+    
+    
+    
+    
+    <div class="calculator-container">
+        <h2 style="text-align: center; font-size: 32px;">Welcome To Katik</h2>
+        <p style="text-align: center; font-size: 16px;">Hai Kawan, Selamat Datang di Katik :] <br> Sebuah Website Aplikasi Sederhana yang Berfungsi Menghitung Luas dan Keliling Bangun Datar. </p>
+        <div class="tombolWrapper"> 
+            <button class="active" id="btnpersegi">persegi</button>
+            <button id="btnpersegipanjang">persegi panjang</button>
+        </div>
+        <div id="ini-persegi">
+        <div class="title-container">
+            <h3>Persegi</h3>
+        </div>
+
+        <div class="square-image-container">
+            <img src="https://www.pngplay.com/wp-content/uploads/12/Square-Free-PNG.png" style="max-width: 20%;">
+            <p>Panjang sisi (s) adalah panjang dari satu sisi persegi.</p>
+        </div>
+
+        <div id="formulasContainer">
+            <h4>Rumus Perhitungan Persegi:</h4>
+            <p>Luas (A) = s * s</p>
+            <p>Keliling (P) = 4 * s</p>
+        </div>
+
+        <form id="calculatorForm">
+            <label for="sideLength">Panjang Sisi:</label>
+            <input type="number" id="sideLength" name="sideLength" required>
+
+            <button type="button" onclick="calculate()">Hitung</button>
+        </form>
+
+        <div id="resultContainer" class="hidden">
+            <h2>Hasil:</h2>
+            <p id="areaResult">Luas: <span id="areaValue"></span></p>
+            <p id="areaFormula">Rumus Luas: A = s * s</p>
+            <p id="perimeterResult">Keliling: <span id="perimeterValue"></span></p>
+            <p id="perimeterFormula">Rumus Keliling: P = 4 * s</p>
+        </div>
+        </div>
+        <div id="ini-persegi-panjang">
+            <div class="title-container">
+                <h3>Persegi Panjang</h3>
+            </div>
+            <div class="square-image-container">
+                <img src="https://www.pngplay.com/wp-content/uploads/12/Square-Free-PNG.png" style="max-width: 20%;">
+                <p>Panjang sisi (s) adalah panjang dari satu sisi persegi.</p>
+            </div>
+            <div id="rectangleFormulasContainer">
+                <h4>Rumus Perhitungan Persegi panjang:</h4>
+                <p>Luas (A) = p * l</p>
+                <p>Keliling (P) = 2 * (p + l)</p>
+            </div>
+            <form id="rectangleCalculatorForm">
+                <label for="sideLength">Panjang :</label>
+                <input type="number" id="rectangleSideLength" name="sideLength" required>
+                <br>
+                <p></p>
+                <label style="margin-right: 18px;" for="sideWidth">Lebar </label>:
+                <input type="number" id="rectangleSideWidth" name="sideWidth" required>
+                <button type="button" onclick="rectangleCalculate()">Hitung</button>
+            </form>
+            <div id="rectangleResultContainer" class="hidden">
+                <h2>Hasil:</h2>
+                <p id="rectangleAreaResult">Luas: <span id="rectangLeareaValue"></span></p>
+                <p id="rectangleAreaFormula">Rumus Luas: A = s * s</p>
+                <p id="rectanglePerimeterResult">Keliling: <span id="rectanglePerimeterValue"></span></p>
+                <p id="rectanglePerimeterFormula">Rumus Keliling: P = 4 * s</p>
+            </div>
+            </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kalkulator Matematik Persegi. Dibuat oleh [Nama Anda].</p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
