@@ -13,26 +13,21 @@ btnpersegipanjang.addEventListener('click',function(){
     btnpersegipanjang.classList.add('active')
 })
 function calculate() {
-    // Get the input value
     const sideLength = parseFloat(document.getElementById('sideLength').value);
 
-    // Validate input
     if (isNaN(sideLength) || sideLength <= 0) {
         alert("Masukkan panjang sisi yang valid.");
         return;
     }
 
-    // Calculate area and perimeter
     const area = sideLength * sideLength;
     const perimeter = 4 * sideLength;
 
-    // Display the result and formulas
     document.getElementById('areaValue').textContent = area;
     document.getElementById('areaFormula').textContent = "Rumus Luas: A = " + sideLength + " * " + sideLength;
     document.getElementById('perimeterValue').textContent = perimeter;
     document.getElementById('perimeterFormula').textContent = "Rumus Keliling: P = 4 * " + sideLength;
 
-    // Show the result and formula containers
     const resultContainer = document.getElementById('resultContainer');
     resultContainer.classList.remove('hidden');
 }
@@ -54,5 +49,14 @@ function rectangleCalculate(){
 
     const resultContainer = document.getElementById('rectangleResultContainer');
     resultContainer.classList.remove('hidden');
+}
+function resetForm() {
+    document.getElementById('sideLength').value = '';
+    document.getElementById('resultContainer').classList.add('hidden');
+}
 
+function resetRectangleForm() {
+    document.getElementById('rectangleSideLength').value = '';
+    document.getElementById('rectangleSideWidth').value = '';
+    document.getElementById('rectangleResultContainer').classList.add('hidden');
 }
